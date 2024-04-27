@@ -1,0 +1,28 @@
+description: "ELM ITV Benchmarks (Efficient Language Models - Is It Viable?)"
+providers: 
+
+  # Control CLOUD LLMs
+  - id: openai:gpt-3.5-turbo-1106
+    config:
+      temperature: 0.2
+  
+  # Experimental Local ELMs
+  - id: ../custom_models/ollamaModelBase.js
+    config:
+      modelName: "llama3"
+      stream: false
+      temperature: 0.2
+  - id: ../custom_models/ollamaModelBase.js
+    config:
+      modelName: "phi3"
+      stream: false
+      temperature: 0.2
+  - id: ../custom_models/ollamaModelBase.js
+    config:
+      modelName: "gemma"
+      stream: false
+      temperature: 0.2
+
+
+evaluateOptions:
+  repeat: 1
