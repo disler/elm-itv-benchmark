@@ -3,6 +3,8 @@
 >
 > Uses [bun](https://bun.sh/), [promptfoo](https://promptfoo.dev/), and [ollama](https://ollama.com/) for a minimalist, cross-platform, local LLM prompt testing & benchmarking experience.
 
+![Zero Cost Prompts](./imgs/zero-cost-prompts.png)
+
 ## Setup
 - [Install Bun](https://bun.sh/docs/installation#macos-and-linux)
 - [Install Ollama](https://ollama.com/download)
@@ -18,6 +20,7 @@
 - Run the ELM-ITV tests: `bun elm`
 
 ## Guide
+- First, [watch the video](https://youtu.be/sb9wSWeOPI4) where we walk through ELMs and this codebase.
 - To get started take a look at `BENCH__minimal_test_suite/` to get an idea of how to structure a basic test suite.
 - Next take a look at the `BENCH__efficient_language_models/` test suite to get an idea of how you can setup tests for your own viability tests for ELMs.
 - Explore other [ollama based models](https://promptfoo.dev/docs/providers/ollama) you can test
