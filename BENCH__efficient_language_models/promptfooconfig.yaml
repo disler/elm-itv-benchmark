@@ -3,52 +3,24 @@ providers:
 
   # Control CLOUD LLMs
   - id: openai:gpt-3.5-turbo-1106
-  
-  # Experimental Local ELMs (with tokens information)
-  - id: ../custom_models/ollamaModelBase.js
-    config:
-      modelName: "llama3:instruct"
-      stream: false
-      temperature: 0.2
-  - id: ../custom_models/ollamaModelBase.js
+
+  # Experimental Local ELMs
+  - id: ollama:chat:llama3
     config:
       modelName: "llama3"
       stream: false
       temperature: 0.2
-  - id: ../custom_models/ollamaModelBase.js
+  - id: ollama:chat:phi3
     config:
       modelName: "phi3"
       stream: false
       temperature: 0.2
-  - id: ../custom_models/ollamaModelBase.js
+  - id: ollama:chat:gemma
     config:
       modelName: "gemma"
       stream: false
       temperature: 0.2
-  # IF YOUR COMPUTER CAN HANDLE IT 
-  # - id: ../custom_models/ollamaModelBase.js
-  #   config:
-  #     modelName: "llama3:70b"
-  #     stream: false
-  #     temperature: 0.2
-
-
-  # Experimental Local ELMs (without token information)
-  # - id: ollama:chat:llama3
-  #   config:
-  #     modelName: "llama3"
-  #     stream: false
-  #     temperature: 0.2
-  # - id: ollama:chat:phi3
-  #   config:
-  #     modelName: "phi3"
-  #     stream: false
-  #     temperature: 0.2
-  # - id: ollama:chat:gemma
-  #   config:
-  #     modelName: "gemma"
-  #     stream: false
-  #     temperature: 0.2
+  
   # IF YOUR COMPUTER CAN HANDLE IT
   # - id: ollama:chat:llama3:70b
   #   config:
@@ -56,7 +28,30 @@ providers:
   #     stream: false
   #     temperature: 0.2
 
-
-
+  # --------------------------------------------------
+  
+  # Experimental Local ELMs (with tokens information)
+  # Use this to get the token usage information
+  # - id: ../custom_models/ollamaModelBase.js
+  #   config:
+  #     modelName: "llama3"
+  #     stream: false
+  #     temperature: 0.2
+  # - id: ../custom_models/ollamaModelBase.js
+  #   config:
+  #     modelName: "phi3"
+  #     stream: false
+  #     temperature: 0.2
+  # - id: ../custom_models/ollamaModelBase.js
+  #   config:
+  #     modelName: "gemma"
+  #     stream: false
+  #     temperature: 0.2
+  # IF YOUR COMPUTER CAN HANDLE IT 
+  # - id: ../custom_models/ollamaModelBase.js
+  #   config:
+  #     modelName: "llama3:70b"
+  #     stream: false
+  #     temperature: 0.2
 evaluateOptions:
-  repeat: 3
+  repeat: 1

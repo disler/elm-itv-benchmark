@@ -1,3 +1,9 @@
+/**
+ * This is basically the same as using the ollama provider by promptfoo.
+ * 
+ * The difference is that we report the token usage which gives promptfoo the info it needs to calculate tokens per second.
+ */
+
 const OllamaCompletionOptionKeys = new Set([
     'num_predict',
     'top_k',

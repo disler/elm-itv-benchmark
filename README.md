@@ -9,15 +9,33 @@
   - [Install llama3](https://ollama.com/library/llama3) `ollama run llama3`
   - [Install phi3](https://ollama.com/library/phi3) `ollama run phi3`
   - [Install gemma](https://ollama.com/library/gemma) `ollama run gemma`
+- Setup .env variables
+  - `cp .env.sample .env`
+  - Add your OpenAI API key to the .env file
 - Install dependencies: `bun i`
-- Run ELM tests: `bun elm`
+- Run the minimal tests: `bun minimal`
 - Open test viewer: `bun view`
+- Run the ELM-ITV tests: `bun elm`
+
+## Guide
+- To get started take a look at `BENCH__minimal_test_suite/` to get an idea of how to structure a basic test suite.
+- Next take a look at the `BENCH__efficient_language_models/` test suite to get an idea of how you can setup tests for your own viability tests for ELMs.
+- Explore other [ollama based models](https://promptfoo.dev/docs/providers/ollama) you can test
+  - Or [OpenAI models](https://promptfoo.dev/docs/providers/openai)
+  - Or [Anthropic models](https://promptfoo.dev/docs/providers/anthropic)
+  - Or [Groq models](https://promptfoo.dev/docs/providers/groq)
+- Modify the `BENCH__minimal_test_suite/` or `BENCH__efficient_language_models/` to suit your needs
+- Create a new test with the [Create a new test suite](#scripts) script
 
 ## Folder Structure
 - `/BENCH__<name of test suite>`
   - `/prompt.txt` - the prompt(s) to test
   - `/test.yaml` - variables and assertions
   - `/promptfooconfig.yaml` - llm model config
+
+## Scripts
+- Create a new test suite: `bun run ./scripts/new_prompt_test`
+- Run a test prompt against a running ollama server `bun run ./scripts/ollama_local_model_call`
 
 ## Resources
 - Ollama model library

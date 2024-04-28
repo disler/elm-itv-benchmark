@@ -1,0 +1,15 @@
+# test suite name
+description: "Minimal Test Suite"
+# model providers
+providers: 
+  # OpenAI GPT3
+  - id: openai:gpt-3.5-turbo-1106
+  # Meta Llama3
+  - id: ollama:chat:llama3
+    config:
+      modelName: "llama3"
+      stream: false
+
+# Repeat test N times
+evaluateOptions:
+  repeat: 1

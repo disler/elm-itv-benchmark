@@ -1,0 +1,10 @@
+# name of the test
+- description: "Minimal Test"
+  # these variables are passed into your prompt.txt
+  vars:
+    name: Dan # update this to be your name!
+  # these assertions are run on the output of your model
+  assert:
+    # this test passes if the output contains any of the values in the list
+    - type: icontains-any
+      value: ["yes", "absolutely", "ready", "build"]
