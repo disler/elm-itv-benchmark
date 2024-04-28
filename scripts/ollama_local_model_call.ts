@@ -1,4 +1,6 @@
-
+/**
+ * Use to test a local ollama model.
+ */
 async function prompt() {
 
     const readline = require('readline');

@@ -1,4 +1,6 @@
-
+/**
+ * Use this to quickly generate a new promptfoo test suite.
+ */
 import * as fs from 'fs';
 import * as path from 'path';
 import * as readline from 'readline';
@@ -39,7 +41,7 @@ const PROMPT_TESTS: FileAndContents = {
 }
 
 function buildPackageScriptsCall(scriptName: string, testName: string) {
-    return `promptfoo eval -c ./${testName}/promptfooconfig.yaml -t ./${testName}/tests.yaml -p ./${testName}/prompt.txt --no-cache --output ./${testName}/output.json`
+    return `promptfoo eval -c ./${testName}/promptfooconfig.yaml -t ./${testName}/tests.yaml -p ./${testName}/prompt.txt --no-cache`
 }
 
 function updateScripts(scriptName: string, testName: string) {
@@ -76,6 +78,9 @@ async function main() {
     testName = ensureAlphaNumericAndUnderscore(testName);
 
     console.log(`Generating test suite for: ${testName}`);
+
+    // prefix testName with BENCH__
+    testName = `BENCH__${testName}`;
 
     const testDirectory = path.join(__dirname, '..', testName);
     if (!fs.existsSync(testDirectory)) {
