@@ -13,3 +13,5 @@ node_modules/
 .DS_Store
 
 llama_files/*
+
+bun.lockb
