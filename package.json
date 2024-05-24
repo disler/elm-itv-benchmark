@@ -1,0 +1,17 @@
+{
+  "name": "elm-is-this-viable-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "view": "promptfoo view",
+    "elm": "promptfoo eval -c ./BENCH__efficient_language_models/promptfooconfig.yaml -t ./BENCH__efficient_language_models/tests.yaml -p ./BENCH__efficient_language_models/prompt.txt --no-cache",
+    "minimal": "promptfoo eval -c ./BENCH__minimal_test_suite/promptfooconfig.yaml -t ./BENCH__minimal_test_suite/tests.yaml -p ./BENCH__minimal_test_suite/prompt.txt --no-cache"
+  },
+  "author": "IndyDevDan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "promptfoo": "^0.55.0"
+  }
+}
